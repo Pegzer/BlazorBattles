@@ -7,7 +7,12 @@ namespace BlazorBattles.Client.Services
 {
     interface IBananaService
     {
+        public event Action OnChange;
+
         int Bananas { get; set;  }
+
         void EatBananas(int amount);
+
+        void AddBananas(int amount);
     }
 }

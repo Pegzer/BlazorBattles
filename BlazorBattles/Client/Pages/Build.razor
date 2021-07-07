@@ -1,12 +1,16 @@
 ﻿@page "/build"
+@inject IBananaService BananaService
+@inject IUnitService UnitService
 
 <h3>Build</h3>
 
 <button class="btn btn-primary" @onclick="() => EatBanans(10)">Eat Bananas</button>
 
 @code {
-    private void EatBanans(int amount)
+    int selectedUnitId = 1;
+
+    public void BuildUnit()
     {
-        Console.WriteLine($"{amount} bananas eaten.");
+        
     }
 }
