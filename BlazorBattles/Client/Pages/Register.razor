@@ -31,13 +31,13 @@
         <InputTextArea id="bio" @bind-Value="user.Bio" class="form-control"></InputTextArea>
     </div>
     <div class="form-group">
-        <label for="startUnitId">Start Unit ID</label>
-        <select @bind="user.StartUnitId" class="form-control">Start Unit
+        <label for="startUnitId">Start Unit ID</label> <br />
+        <InputRadioGroup id="startUnit" @bind-Value="user.StartUnitId" class="form-control">
             @foreach (var unit in UnitService.Units)
             {
-                <option value="@unit.Id">@unit.Title</option>
+                <InputRadio Value="@unit.Id" />@unit.Title<br />
             }
-        </select>
+        </InputRadioGroup>
     </div>
     <div class="form-group">
         <label for="bananas">Bananas</label>
