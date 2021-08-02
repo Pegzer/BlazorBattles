@@ -1,6 +1,7 @@
 @page "/register"
 @inject IUnitService UnitService
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 
 <h3>Register</h3>
 
@@ -63,5 +64,6 @@
     void HandleRegistration()
     {
         JSRuntime.InvokeVoidAsync("console.log", "New user: ", user);
+        NavigationManager.NavigateTo("login");
     }
 }
